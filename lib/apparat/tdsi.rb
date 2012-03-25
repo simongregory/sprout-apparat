@@ -53,7 +53,7 @@ module Apparat
     ##
     # The default executable target
     #
-    set :executable, :reducer
+    set :executable, :tdsi
 
   end
 
