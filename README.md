@@ -6,23 +6,27 @@ As I only need this to work on my dev machine there's a good chance you're going
 
 ## Install
 
-    git clone [this repo]
+    gem install apparat
+
+#### Or
+
+	git clone [this repo]
     cd sprout-apparat
     bundle install
     gem build apparat.gemspec
     gem install apparat
 
-#### Or
+#### You need [Scala]((http://www.scala-lang.org)
 
-    gem install apparat
-
-#### You need scala
-
-Until it's bundled with the gem then you need to install [scala 2.8.2](http://www.scala-lang.org/downloads). I had scala 2.9.1 installed via homebrew but it turned out to be incompatible with apparat. So I dropped 2.8.2 into `/usr/local/Cellar/scala` and switched to it with `brew switch scala 2.8.2`.
+Until it's bundled with the gem you need to install [scala 2.8.2](http://www.scala-lang.org/downloads). I had scala 2.9.1 installed via homebrew but it turned out to be incompatible with apparat. So I dropped 2.8.2 into `/usr/local/Cellar/scala` and switched to it with `brew switch scala 2.8.2`, bingo!
 
 ## Usage
 
-Add the following to your rake file
+Add this to your gem file
+
+    gem 'apparat'
+
+Then the following to your rake file
 
     dump :dump do |t|
 		t.input = 'input.swf'
@@ -53,25 +57,29 @@ Add the following to your rake file
 		t.macro = true
 	end
 
-## MIT License
+Then run with
 
-Copyright 2012 Simon Gregory
+    rake reduce
 
-Permission is hereby granted, free of charge, to any person obtaining
-a copy of this software and associated documentation files (the
-'Software'), to deal in the Software without restriction, including
-without limitation the rights to use, copy, modify, merge, publish,
-distribute, sublicense, and/or sell copies of the Software, and to
-permit persons to whom the Software is furnished to do so, subject to
-the following conditions:
+## Released under the MIT License
 
-The above copyright notice and this permission notice shall be
-included in all copies or substantial portions of the Software.
+	Copyright 2012 Simon Gregory
 
-THE SOFTWARE IS PROVIDED 'AS IS', WITHOUT WARRANTY OF ANY KIND,
-EXPRESS OR IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF
-MERCHANTABILITY, FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT.
-IN NO EVENT SHALL THE AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY
-CLAIM, DAMAGES OR OTHER LIABILITY, WHETHER IN AN ACTION OF CONTRACT,
-TORT OR OTHERWISE, ARISING FROM, OUT OF OR IN CONNECTION WITH THE
-SOFTWARE OR THE USE OR OTHER DEALINGS IN THE SOFTWARE.
+	Permission is hereby granted, free of charge, to any person obtaining
+	a copy of this software and associated documentation files (the
+	'Software'), to deal in the Software without restriction, including
+	without limitation the rights to use, copy, modify, merge, publish,
+	distribute, sublicense, and/or sell copies of the Software, and to
+	permit persons to whom the Software is furnished to do so, subject to
+	the following conditions:
+
+	The above copyright notice and this permission notice shall be
+	included in all copies or substantial portions of the Software.
+
+	THE SOFTWARE IS PROVIDED 'AS IS', WITHOUT WARRANTY OF ANY KIND,
+	EXPRESS OR IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF
+	MERCHANTABILITY, FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT.
+	IN NO EVENT SHALL THE AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY
+	CLAIM, DAMAGES OR OTHER LIABILITY, WHETHER IN AN ACTION OF CONTRACT,
+	TORT OR OTHERWISE, ARISING FROM, OUT OF OR IN CONNECTION WITH THE
+	SOFTWARE OR THE USE OR OTHER DEALINGS IN THE SOFTWARE.
