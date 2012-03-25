@@ -7,7 +7,7 @@ require 'apparat/version'
 
 Gem::Specification.new do |s|
   s.name                       = Apparat::NAME
-  s.version                    = Apparat::VERSION
+  s.version                    = Apparat::GEM_VERSION
   s.platform                   = Gem::Platform::RUBY
   s.authors                    = ["Simon Gregory"]
   s.email                      = "projectsprouts@googlegroups.com"

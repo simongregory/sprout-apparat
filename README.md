@@ -18,35 +18,36 @@ As I only need this to work on my dev machine there's a good chance you're going
 
 #### You need scala
 
-Until it's bundled with the gem then you need to install [scala 2.8.2](http://www.scala-lang.org/downloads). I had scala 2.9.1 installed via homebrew but it turned out to be incompatible with apparat. So I dropped 2.8.2 into `/usr/local/Cellar/scala` and switched to it with `brew switch scala 2.8.2`
+Until it's bundled with the gem then you need to install [scala 2.8.2](http://www.scala-lang.org/downloads). I had scala 2.9.1 installed via homebrew but it turned out to be incompatible with apparat. So I dropped 2.8.2 into `/usr/local/Cellar/scala` and switched to it with `brew switch scala 2.8.2`.
 
 ## Usage
 
 Add the following to your rake file
 
-	apparat :coverage do |t|
+	coverage :cover do |t|
 	end
 
-    apparat :dump do |t|
+    dump :dumper do |t|
 		t.input = 'input.swf'
 		t.output = 'report/'
 		t.swf = true
 		t.uml = true
-		t.abc = [default|raw|cfg]
+		t.abc = true
+		t.bc = [default|raw|cfg]
 	end
 
-	apparat :reducer do |t|
+	reduce :down do |t|
 		t.input = 'input.swf'
 		t.output = 'output.swf'
 		t.quality = '0.96'
 	end
 
-	apparat :stripper do |t|
+	stripper :paint do |t|
 		t.input = 'input.swf'
 		t.output = 'output.swf' #optional
     end
 
-	apparat :tdsi do |t|
+	tdsi :turbo do |t|
 		t.fix = false
 		t.alchemy = true
 		t.inlined = true

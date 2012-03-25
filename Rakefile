@@ -31,7 +31,7 @@ CLEAN.add '*.gem'
 
 task :release do
   puts ""
-  print "Are you sure you want to relase Apparat #{Apparat::VERSION}? [y/N] "
+  print "Are you sure you want to relase Apparat #{Apparat::GEM_VERSION}? [y/N] "
   exit unless STDIN.gets.index(/y/i) == 0
 
   unless `git branch` =~ /^\* master$/
@@ -41,17 +41,17 @@ task :release do
 
   # Build gem and upload
   sh "gem build apparat.gemspec"
-  sh "gem push apparat-#{Apparat::VERSION}.gem"
-  sh "rm apparat-#{Apparat::VERSION}.gem"
+  sh "gem push apparat-#{Apparat::GEM_VERSION}.gem"
+  sh "rm apparat-#{Apparat::GEM_VERSION}.gem"
 
   # Commit
-  sh "git commit --allow-empty -a -m 'v#{Apparat::VERSION}'"
-  sh "git tag v#{Apparat::VERSION}"
+  sh "git commit --allow-empty -a -m 'v#{Apparat::GEM_VERSION}'"
+  sh "git tag v#{Apparat::GEM_VERSION}"
   sh "git push origin master"
-  sh "git push origin v#{Apparat::VERSION}"
+  sh "git push origin v#{Apparat::GEM_VERSION}"
 end
 
 task :install do
   sh "gem build apparat.gemspec"
-  sh "gem install --local apparat-#{Apparat::VERSION}.gem"
+  sh "gem install apparat-#{Apparat::GEM_VERSION}.gem"
 end
