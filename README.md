@@ -24,9 +24,6 @@ Until it's bundled with the gem then you need to install [scala 2.8.2](http://ww
 
 Add the following to your rake file
 
-	coverage :cover do |t|
-	end
-
     dump :dumper do |t|
 		t.input = 'input.swf'
 		t.output = 'report/'
@@ -42,12 +39,14 @@ Add the following to your rake file
 		t.quality = '0.96'
 	end
 
-	stripper :paint do |t|
+	stripper :strip do |t|
 		t.input = 'input.swf'
-		t.output = 'output.swf' #optional
+		t.output = 'output.swf'
     end
 
 	tdsi :turbo do |t|
+		t.input = 'input.swf'
+		t.output = 'output.swf'
 		t.fix = false
 		t.alchemy = true
 		t.inlined = true
