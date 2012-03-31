@@ -31,7 +31,7 @@ CLEAN.add '*.gem'
 
 task :release do
   puts ""
-  print "Are you sure you want to relase Apparat #{Apparat::GEM_VERSION}? [y/N] "
+  print "Are you sure you want to release Apparat #{Apparat::GEM_VERSION}? [y/N] "
   exit unless STDIN.gets.index(/y/i) == 0
 
   unless `git branch` =~ /^\* master$/

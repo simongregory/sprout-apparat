@@ -1,6 +1,7 @@
 require 'sprout'
 
 require 'apparat/concrete'
+require 'apparat/coverage'
 require 'apparat/dump'
 require 'apparat/reducer'
 require 'apparat/scala'
@@ -19,7 +20,7 @@ Sprout::Specification.new do |s|
     t.url = Apparat::ZIP
     t.md5 = Apparat::MD5
     t.add_executable :concrete, "apparat-#{Apparat::VERSION}/concrete"
-    #t.add_executable :coverage, "apparat-#{Apparat::VERSION}/coverage"
+    t.add_executable :coverage, "apparat-#{Apparat::VERSION}/coverage"
     t.add_executable :dump, "apparat-#{Apparat::VERSION}/dump"
     t.add_executable :reducer, "apparat-#{Apparat::VERSION}/reducer"
     t.add_executable :stripper, "apparat-#{Apparat::VERSION}/stripper"
