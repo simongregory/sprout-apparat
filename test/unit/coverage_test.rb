@@ -21,8 +21,9 @@ class StripperTest < Test::Unit::TestCase
       tool = Apparat::Coverage.new
       tool.input = @fixture
       tool.output = 'coverage/covered.swf'
+      tool.source = 'src/'
 
-      assert_equal "-i #{@fixture} -o coverage/covered.swf", tool.to_shell
+      assert_equal "-i #{@fixture} -o coverage/covered.swf -s src/", tool.to_shell
     end
 
   end

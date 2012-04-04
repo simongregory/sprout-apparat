@@ -9,6 +9,9 @@ require 'apparat/stripper'
 require 'apparat/tdsi'
 require 'apparat/version'
 
+require 'apparat/report/coverage_server'
+require 'apparat/report/task'
+
 Sprout::Specification.new do |s|
 
   s.name    = Apparat::NAME

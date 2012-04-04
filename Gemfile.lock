@@ -1,7 +1,7 @@
 PATH
   remote: .
   specs:
-    apparat (0.0.1)
+    apparat (0.0.2)
       sprout (>= 1.1.15.pre)
 
 GEM
