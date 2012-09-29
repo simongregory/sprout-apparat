@@ -1,5 +1,7 @@
 # The Apparat Sprout Gem
 
+[![Build Status](https://secure.travis-ci.org/simongregory/sprout-apparat.png)](http://travis-ci.org/simongregory/sprout-apparat)
+
 This [RubyGem](http://docs.rubygems.org/read/book/7) contains [rake](http://rake.rubyforge.org/) tasks to add support for [Apparat](https://github.com/joa/apparat#readme) to [Project Sprouts](http://projectsprouts.org).
 
 As I only need this to work on my dev machine there's a good chance you're going to have to do some extra work to get it running.
