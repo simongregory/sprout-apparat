@@ -18,7 +18,7 @@ As I only need this to work on my dev machine there's a good chance you're going
     gem build apparat.gemspec
     gem install apparat
 
-#### You need [Scala]((http://www.scala-lang.org)
+#### You need [Scala](http://www.scala-lang.org)
 
 Until it's bundled with the gem you need to install [scala 2.8.2](http://www.scala-lang.org/downloads). I had scala 2.9.1 installed via homebrew but it turned out to be incompatible with apparat. So I dropped 2.8.2 into `/usr/local/Cellar/scala` and switched to it with `brew switch scala 2.8.2`, bingo!
 
