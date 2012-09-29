@@ -55,3 +55,6 @@ task :install do
   sh "gem build apparat.gemspec"
   sh "gem install apparat-#{Apparat::GEM_VERSION}.gem"
 end
+
+desc "Default"
+task :default => [:test]
